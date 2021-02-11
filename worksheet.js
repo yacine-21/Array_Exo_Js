@@ -38,7 +38,7 @@ let AllHeights = characters.map((character) => character.height)
 console.log(AllHeights)
 //3. Get array of objects with just name and height properties
 let ArrayProperties = characters.map((character) => {
-    return JSON.stringify(character.name + " " +  character.height)
+    return (character.name + "-" + character.height).split("-")
 })
 console.log(ArrayProperties)
 //4. Get array of all first names
@@ -50,9 +50,28 @@ console.log(AllNames)
 
 //***REDUCE***
 //1. Get total mass of all characters
+let massCharacters = characters.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.mass
+},0)
+console.log(massCharacters);
 //2. Get total height of all characters
+let heightCharacters = characters.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.height
+},0)
+console.log(heightCharacters);
 //3. Get total number of characters by eye color
+eyeColor = characters.reduce((acc, curr) => {
+    return acc + curr.name + ": " +  curr.eye_color + ". "
+},"")
+
+console.log(eyeColor);
 //4. Get total number of characters in all the character names
+let numberNamesCharacters = characters.reduce((acc,curr)=> {
+   return acc + curr.name.length
+},0)
+console.log(numberNamesCharacters)
+// console.log(numberNamesCharacters);
+
 
 //***FILTER***
 //1. Get characters with mass greater than 100

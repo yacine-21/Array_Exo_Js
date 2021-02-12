@@ -75,9 +75,17 @@ console.log(numberNamesCharacters)
 
 //***FILTER***
 //1. Get characters with mass greater than 100
+let MAssOverThan100 = characters.filter((character) => (character.mass > 100))
+console.log(MAssOverThan100)
 //2. Get characters with height less than 200
+let CharacterHeightOver200 = characters.filter((character => character.height > 200))
+console.log(CharacterHeightOver200)
 //3. Get all male characters
+let characterMale = characters.filter((character => character.gender ==="male"))
+console.log(characterMale)
 //4. Get all female characters
+let characterFemale = characters.filter((character => character.gender ==="female"))
+console.log(characterFemale)
 
 //***SORT***
 //1. Sort by mass

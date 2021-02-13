@@ -60,7 +60,7 @@ let heightCharacters = characters.reduce((accumulator, currentValue) => {
 },0)
 console.log(heightCharacters);
 //3. Get total number of characters by eye color
-eyeColor = characters.reduce((acc, curr) => {
+let eyeColor = characters.reduce((acc, curr) => {
     return acc + curr.name + ": " +  curr.eye_color + ". "
 },"")
 
@@ -89,9 +89,37 @@ console.log(characterFemale)
 
 //***SORT***
 //1. Sort by mass
+function sortByMass (a,b){
+    return a.mass - b.mass
+}
+let SortCharactersByMass = characters.sort(sortByMass)
+console.log(SortCharactersByMass)
 //2. Sort by height
+function sortByHeight (a,b){
+    return a.height - b.height
+}
+let sortCharactersByHeight = characters.sort(sortByHeight)
+console.log(sortCharactersByHeight)
 //3. Sort by name
+function sortByName (a,b) {
+    if (a.name > b.name){
+        return 1
+    } else {
+        return -1
+    }
+}
+let sortCharactersByName = characters.sort(sortByName)
+console.log(sortCharactersByName)
 //4. Sort by gender
+function sortByGender(a,b){
+    if (a.gender > b.gender){
+        return 1
+    } else {
+        return -1
+    }
+}
+let sortCharactersByGender = characters.sort(sortByGender)
+console.log(sortCharactersByGender)
 
 //***EVERY***
 //1. Does every character have blue eyes?

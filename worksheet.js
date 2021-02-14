@@ -123,9 +123,17 @@ console.log(sortCharactersByGender)
 
 //***EVERY***
 //1. Does every character have blue eyes?
+let AllBluesEyes = characters.every((character) => character.eye_color === "blue")
+console.log(AllBluesEyes)
 //2. Does every character have mass more than 40?
+let MassOver40 = characters.every((character)=> character.mass > 40)
+console.log(MassOver40)
 //3. Is every character shorter than 200?
+let shorterThan200 = characters.every((character)=> character.height < 202)
+console.log(shorterThan200)
 //4. Is every character male?
+let EveryMale = characters.every((character)=> character.gender === "male")
+console.log(EveryMale)
 
 //***SOME***
 //1. Is there at least one male character?

@@ -29,7 +29,8 @@ const characters = [
     },
 ];
 
-//***MAP***
+// **********************************************************MAP**********************************************************
+
 //1. Get array of all names
 let Allnames = characters.map((character) => character.name)
 console.log(Allnames)
@@ -48,7 +49,8 @@ let AllNames = characters.map((character =>{
 }))
 console.log(AllNames)
 
-//***REDUCE***
+//**********************************************************REDUCE**********************************************************
+
 //1. Get total mass of all characters
 let massCharacters = characters.reduce((accumulator, currentValue) => {
     return accumulator + currentValue.mass
@@ -73,7 +75,8 @@ console.log(numberNamesCharacters)
 // console.log(numberNamesCharacters);
 
 
-//***FILTER***
+//**********************************************************FILTER**********************************************************
+
 //1. Get characters with mass greater than 100
 let MAssOverThan100 = characters.filter((character) => (character.mass > 100))
 console.log(MAssOverThan100)
@@ -87,7 +90,8 @@ console.log(characterMale)
 let characterFemale = characters.filter((character => character.gender ==="female"))
 console.log(characterFemale)
 
-//***SORT***
+//**********************************************************SORT**********************************************************
+
 //1. Sort by mass
 function sortByMass (a,b){
     return a.mass - b.mass
@@ -121,7 +125,8 @@ function sortByGender(a,b){
 let sortCharactersByGender = characters.sort(sortByGender)
 console.log(sortCharactersByGender)
 
-//***EVERY***
+//**********************************************************EVERY**********************************************************
+
 //1. Does every character have blue eyes?
 let AllBluesEyes = characters.every((character) => character.eye_color === "blue")
 console.log(AllBluesEyes)
@@ -135,8 +140,16 @@ console.log(shorterThan200)
 let EveryMale = characters.every((character)=> character.gender === "male")
 console.log(EveryMale)
 
-//***SOME***
+//**********************************************************SOME**********************************************************
 //1. Is there at least one male character?
+let AtLeastOneMale = characters.some((character)=> character.gender ==="male")
+console.log(AtLeastOneMale)
 //2. Is there at least one character with blue eyes?
+let AtLeastOneBlueEyes = characters.some((character)=> character.eye_color === "blue")
+console.log(AtLeastOneBlueEyes);
 //3. Is there at least one character taller than 210?
+let AtleastTallerThan200 = characters.some((character)=> character.height > 210)
+console.log(AtleastTallerThan200)
 //4. Is there at least one character that has mass less than 50?
+let AtLeastMassLessThan50 = characters.some((character)=> character.mass < 50)
+console.log(AtLeastMassLessThan50)
